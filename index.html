@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculus Lesson: Infinite Series</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .code {
+            background: #eaeaea;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+        .quiz {
+            margin-top: 20px;
+        }
+        .quiz button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .quiz button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculus Lesson: Infinite Series</h1>
+        <p>In calculus, an infinite series is the sum of the terms of an infinite sequence. Infinite series are used in various fields such as mathematics, physics, engineering, and finance.</p>
+        
+        <h2>1. Introduction to Infinite Series</h2>
+        <p>An infinite series is written as:</p>
+        <div class="code">
+            <p>$$S = \sum_{n=0}^{\infty} a_n$$</p>
+        </div>
+        <p>where \(a_n\) represents the nth term of the sequence.</p>
+        
+        <h2>2. Geometric Series</h2>
+        <p>A geometric series is a series with a constant ratio between successive terms. It is written as:</p>
+        <div class="code">
+            <p>$$S = a + ar + ar^2 + ar^3 + \cdots$$</p>
+        </div>
+        <p>where \(a\) is the first term and \(r\) is the common ratio.</p>
+        
+        <h2>3. Harmonic Series</h2>
+        <p>A harmonic series is the sum of the reciprocals of all positive integers:</p>
+        <div class="code">
+            <p>$$S = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots$$</p>
+        </div>
+        
+        <h2>4. Convergence and Divergence</h2>
+        <p>An infinite series converges if the sum approaches a finite number as the number of terms goes to infinity. Otherwise, it diverges.</p>
+        
+        <div class="quiz">
+            <h2>Quick Quiz</h2>
+            <p>Does the geometric series \(S = 2 + 2 \cdot \frac{1}{2} + 2 \cdot \left(\frac{1}{2}\right)^2 + \cdots\) converge or diverge?</p>
+            <button onclick="checkAnswer(true)">Converge</button>
+            <button onclick="checkAnswer(false)">Diverge</button>
+            <p id="quiz-result"></p>
+        </div>
+    </div>
+
+    <script>
+        function checkAnswer(isConverge) {
+            const result = document.getElementById('quiz-result');
+            if (isConverge) {
+                result.textContent = "Correct! This geometric series converges.";
+                result.style.color = "green";
+            } else {
+                result.textContent = "Incorrect. This geometric series actually converges.";
+                result.style.color = "red";
+            }
+        }
+    </script>
+</body>
+</html>
